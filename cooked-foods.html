@@ -16,9 +16,9 @@
                 <img src="images/saifoodslogo.png" alt="Logo">
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About </a>
-                <a href="cooked-foods.html" class="nav-link">Cooked Foods</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="cooked-foods.html" class="nav-link active">Cooked Foods</a>
                 <a href="special-items.html" class="nav-link">Special Items</a>
                 <a href="battervariety.html" class="nav-link">Batter Varieties</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
@@ -46,125 +46,317 @@
         <div class="container">
             <!-- Tiffin Items -->
             <div class="food-category">
-                <h3 class="category-title"><i class="fas fa-utensils"></i> Tiffin Items</h3>
-                <div class="food-grid">
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Dosa">
-                        <div class="food-info">
-                            <h4>தோசை / Dosa</h4>
-                            <p>Crispy golden crepe made from fermented rice and lentil batter, served with sambhar and coconut chutney</p>
+                <div class="category-header">
+                    <h3 class="category-title"><i class="fas fa-utensils"></i> Tiffin Items</h3>
+                    <div class="view-toggle">
+                        <button class="toggle-btn active" data-view="list">
+                            <i class="fas fa-list"></i> List View
+                        </button>
+                        <button class="toggle-btn" data-view="grid">
+                            <i class="fas fa-th"></i> Grid View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- List View -->
+                <div class="list-view active" id="tiffin-list">
+                    <div class="list-item">
+                        <div class="list-image">
+                            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Tiffin Items">
+                        </div>
+                        <div class="list-content">
+                            <h4>Traditional Tiffin Collection</h4>
+                            <ul class="menu-list">
+                                <li><span class="item-name">தோசை / Dosa</span> - Crispy golden crepe made from fermented rice and lentil batter</li>
+                                <li><span class="item-name">இட்லி / Idli</span> - Soft steamed rice cakes made from fermented batter</li>
+                                <li><span class="item-name">வடை / Vada</span> - Crispy deep-fried lentil donuts with fluffy interior</li>
+                                <li><span class="item-name">உத்தப்பம் / Uttapam</span> - Thick pancake topped with vegetables and spices</li>
+                                <li><span class="item-name">உப்புமா / Upma</span> - Savory semolina porridge with vegetables</li>
+                                <li><span class="item-name">பொங்கல் / Pongal</span> - Comforting rice and lentil dish with ghee and spices</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Idli">
-                        <div class="food-info">
-                            <h4>இட்லி / Idli</h4>
-                            <p>Soft steamed rice cakes made from fermented batter, perfect with sambhar and various chutneys</p>
+                </div>
+
+                <!-- Grid View -->
+                <div class="grid-view" id="tiffin-grid">
+                    <div class="food-grid">
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Dosa">
+                            <div class="food-overlay">
+                                <h4>தோசை / Dosa</h4>
+                                <p>Crispy golden crepe made from fermented rice and lentil batter</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Vada">
-                        <div class="food-info">
-                            <h4>வடை / Vada</h4>
-                            <p>Crispy deep-fried lentil donuts with a fluffy interior, traditionally served with sambhar</p>
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Idli">
+                            <div class="food-overlay">
+                                <h4>இட்லி / Idli</h4>
+                                <p>Soft steamed rice cakes made from fermented batter</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Uttapam">
-                        <div class="food-info">
-                            <h4>உத்தப்பம் / Uttapam</h4>
-                            <p>Thick pancake made from fermented batter, topped with vegetables and spices</p>
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Vada">
+                            <div class="food-overlay">
+                                <h4>வடை / Vada</h4>
+                                <p>Crispy deep-fried lentil donuts with fluffy interior</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Upma">
-                        <div class="food-info">
-                            <h4>உப்புமா / Upma</h4>
-                            <p>Savory semolina porridge cooked with vegetables and aromatic spices</p>
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Uttapam">
+                            <div class="food-overlay">
+                                <h4>உத்தப்பம் / Uttapam</h4>
+                                <p>Thick pancake topped with vegetables and spices</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Pongal">
-                        <div class="food-info">
-                            <h4>பொங்கல் / Pongal</h4>
-                            <p>Comforting rice and lentil dish cooked with ghee, pepper, and cumin</p>
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Upma">
+                            <div class="food-overlay">
+                                <h4>உப்புமா / Upma</h4>
+                                <p>Savory semolina porridge with vegetables</p>
+                            </div>
+                        </div>
+                        <div class="food-card">
+                            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Pongal">
+                            <div class="food-overlay">
+                                <h4>பொங்கல் / Pongal</h4>
+                                <p>Comforting rice and lentil dish with ghee and spices</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Idiyappam Varieties -->
-            <div class="food-category">
-                <h3 class="category-title"><i class="fas fa-seedling"></i> Idiyappam Varieties</h3>
-                <div class="food-grid">
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Plain Idiyappam">
-                        <div class="food-info">
-                            <h4>இடியாப்பம் / Plain Idiyappam</h4>
-                            <p>Delicate rice noodles steamed to perfection, served with coconut milk or curry</p>
-                        </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Coconut Idiyappam">
-                        <div class="food-info">
-                            <h4>தேங்காய் இடியாப்பம் / Coconut Idiyappam</h4>
-                            <p>Rice noodles mixed with fresh grated coconut and a touch of jaggery</p>
-                        </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Spicy Idiyappam">
-                        <div class="food-info">
-                            <h4>காரம் இடியாப்பம் / Spicy Idiyappam</h4>
-                            <p>Rice noodles tossed with spicy masala and curry leaves for extra flavor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rice Items -->
-            <div class="food-category">
-                <h3 class="category-title"><i class="fas fa-bowl-rice"></i> Rice Items</h3>
-                <div class="food-grid">
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Sambhar Rice">
-                        <div class="food-info">
+            <!-- Rice Items with Parallax -->
+            <div class="rice-section parallax-section">
+                <div class="parallax-bg"></div>
+                <div class="parallax-content">
+                    <h3 class="category-title"><i class="fas fa-bowl-rice"></i> Rice Items</h3>
+                    <div class="rice-items">
+                        <div class="rice-item">
                             <h4>சாம்பார் சாதம் / Sambhar Rice</h4>
                             <p>Aromatic rice mixed with flavorful sambhar, vegetables, and traditional spices</p>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Curd Rice">
-                        <div class="food-info">
+                        <div class="rice-item">
                             <h4>தயிர் சாதம் / Curd Rice</h4>
                             <p>Cooling rice mixed with fresh yogurt, tempered with mustard seeds and curry leaves</p>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Lemon Rice">
-                        <div class="food-info">
+                        <div class="rice-item">
                             <h4>எலுமிச்சை சாதம் / Lemon Rice</h4>
                             <p>Tangy rice flavored with fresh lemon juice, turmeric, and aromatic curry leaves</p>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Coconut Rice">
-                        <div class="food-info">
+                        <div class="rice-item">
                             <h4>தேங்காய் சாதம் / Coconut Rice</h4>
                             <p>Fragrant rice cooked with fresh coconut, cashews, and traditional seasonings</p>
                         </div>
-                    </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Tamarind Rice">
-                        <div class="food-info">
+                        <div class="rice-item">
                             <h4>புளியோதரை / Tamarind Rice</h4>
                             <p>Tangy rice dish with tamarind, peanuts, and a blend of South Indian spices</p>
                         </div>
                     </div>
-                    <div class="food-card">
-                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Vegetable Rice">
-                        <div class="food-info">
-                            <h4>காய்கறி சாதம் / Vegetable Rice</h4>
-                            <p>Nutritious rice cooked with mixed vegetables and aromatic spices</p>
+                </div>
+            </div>
+
+            <!-- Idiyappam Carousel -->
+            <div class="idiyappam-section">
+                <h3 class="category-title"><i class="fas fa-seedling"></i> Idiyappam Varieties</h3>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-card">
+                            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Plain Idiyappam">
+                            <div class="carousel-content">
+                                <h4>இடியாப்பம் / Plain Idiyappam</h4>
+                                <p>Delicate rice noodles steamed to perfection</p>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Coconut Idiyappam">
+                            <div class="carousel-content">
+                                <h4>தேங்காய் இடியாப்பம் / Coconut Idiyappam</h4>
+                                <p>Rice noodles mixed with fresh grated coconut</p>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Spicy Idiyappam">
+                            <div class="carousel-content">
+                                <h4>காரம் இடியாப்பம் / Spicy Idiyappam</h4>
+                                <p>Rice noodles tossed with spicy masala</p>
+                            </div>
+                        </div>
+                        <div class="carousel-card">
+                            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Sweet Idiyappam">
+                            <div class="carousel-content">
+                                <h4>இனிப்பு இடியாப்பம் / Sweet Idiyappam</h4>
+                                <p>Rice noodles with jaggery and coconut</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Santhagain Section with Flip Cards -->
+            <div class="santhagain-section">
+                <h3 class="category-title"><i class="fas fa-magic"></i> Santhagain Specials</h3>
+                <div class="flip-cards-container">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Special Dish 1">
+                                <h4>Traditional Feast</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Traditional Feast</h4>
+                                <p>A complete traditional meal with multiple courses including rice, sambhar, rasam, vegetables, and sweets. Prepared with authentic recipes passed down through generations.</p>
+                                <div class="price">₹250</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Special Dish 2">
+                                <h4>Festival Special</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Festival Special</h4>
+                                <p>Special dishes prepared during festivals with premium ingredients and traditional cooking methods. A celebration of flavors and culture.</p>
+                                <div class="price">₹180</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Special Dish 3">
+                                <h4>Royal Thali</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Royal Thali</h4>
+                                <p>An elaborate spread fit for royalty, featuring the finest ingredients and most complex preparations. A true culinary masterpiece.</p>
+                                <div class="price">₹350</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sweet Karam Section -->
+            <div class="sweet-karam-section">
+                <h3 class="category-title"><i class="fas fa-candy-cane"></i> Sweet & Karam</h3>
+                <div class="sweet-karam-grid">
+                    <div class="sweet-karam-card">
+                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Traditional Laddu">
+                        <div class="card-content">
+                            <h4>லட்டு / Traditional Laddu</h4>
+                            <p>Sweet balls made with premium ingredients</p>
+                        </div>
+                    </div>
+                    <div class="sweet-karam-card">
+                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Spicy Karam">
+                        <div class="card-content">
+                            <h4>கறம் / Spicy Karam</h4>
+                            <p>Traditional spicy powder mix</p>
+                        </div>
+                    </div>
+                    <div class="sweet-karam-card">
+                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Rich Halwa">
+                        <div class="card-content">
+                            <h4>ஹல்வா / Rich Halwa</h4>
+                            <p>Creamy sweet dessert with nuts</p>
+                        </div>
+                    </div>
+                    <div class="sweet-karam-card">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Mysore Pak">
+                        <div class="card-content">
+                            <h4>மைசூர் பாக் / Mysore Pak</h4>
+                            <p>Rich ghee-based sweet delicacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homemade Biscuits - Masonry Layout -->
+            <div class="biscuits-section">
+                <h3 class="category-title"><i class="fas fa-cookie"></i> Homemade Biscuits</h3>
+                <div class="masonry-grid">
+                    <div class="masonry-item tall">
+                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop" alt="Butter Cookies">
+                        <div class="masonry-overlay">
+                            <h4>Butter Cookies</h4>
+                            <p>Crispy homemade butter cookies</p>
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Coconut Biscuits">
+                        <div class="masonry-overlay">
+                            <h4>Coconut Biscuits</h4>
+                            <p>Fresh coconut flavored biscuits</p>
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Jeera Cookies">
+                        <div class="masonry-overlay">
+                            <h4>Jeera Cookies</h4>
+                            <p>Cumin flavored savory cookies</p>
+                        </div>
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" alt="Assorted Biscuits">
+                        <div class="masonry-overlay">
+                            <h4>Assorted Collection</h4>
+                            <p>Mix of various homemade biscuits</p>
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Chocolate Cookies">
+                        <div class="masonry-overlay">
+                            <h4>Chocolate Cookies</h4>
+                            <p>Rich chocolate chip cookies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks Timeline -->
+            <div class="snacks-section">
+                <h3 class="category-title"><i class="fas fa-route"></i> Snack Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Morning Snacks">
+                            <h4>Morning Delights</h4>
+                            <p>Start your day with crispy murukku and fresh banana chips</p>
+                            <span class="timeline-time">6:00 AM - 10:00 AM</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Afternoon Snacks">
+                            <h4>Afternoon Treats</h4>
+                            <p>Perfect tea-time companions with spicy mixture and sweet treats</p>
+                            <span class="timeline-time">2:00 PM - 5:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Evening Snacks">
+                            <h4>Evening Specials</h4>
+                            <p>Savory bondas and crispy pakoras for your evening cravings</p>
+                            <span class="timeline-time">5:00 PM - 8:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Night Snacks">
+                            <h4>Night Bites</h4>
+                            <p>Light and healthy options for late night munching</p>
+                            <span class="timeline-time">8:00 PM - 10:00 PM</span>
                         </div>
                     </div>
                 </div>
@@ -172,78 +364,77 @@
         </div>
     </section>
 
-      <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            
-            <!-- Logo & About -->
-            <div class="footer-section">
-                <div class="footer-logo">
-                    <img src="images/saifoodslogo.png" alt="Logo">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                
+                <!-- Logo & About -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/saifoodslogo.png" alt="Logo">
+                    </div>
+                    <p>Serving authentic South Indian cuisine with love and tradition since decades.</p>
                 </div>
-                <p>Serving authentic South Indian cuisine with love and tradition since decades.</p>
-            </div>
 
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="cooked-foods.html">Menu</a></li>
-                    <li><a href="special-items.html">Specials</a></li>
-                    <li><a href="battervariety.html">Batters</a></li>
-                    <li><a href="franchise.html">Franchise</a></li>
-                </ul>
-            </div>
-
-            <!-- Social Links -->
-<div class="footer-section">
-    <h4>Follow Us</h4>
-    <ul class="social-links">
-        <li>
-            <a href="https://www.instagram.com/yourusername" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-        </li>
-        <li>
-            <a href="https://wa.me/919876543210" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-        </li>
-        <li>
-            <a href="https://www.facebook.com/yourusername" target="_blank">
-                <i class="fab fa-facebook-f"></i> Facebook
-            </a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/yourchannel" target="_blank">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-            <!-- Contact Info -->
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <div class="footer-contact">
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-envelope"></i> info@shrisaifoods.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Food City - 600001</p>
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="cooked-foods.html">Menu</a></li>
+                        <li><a href="special-items.html">Specials</a></li>
+                        <li><a href="battervariety.html">Batters</a></li>
+                        <li><a href="franchise.html">Franchise</a></li>
+                    </ul>
                 </div>
+
+                <!-- Social Links -->
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.instagram.com/yourusername" target="_blank">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/919876543210" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/yourusername" target="_blank">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/yourchannel" target="_blank">
+                                <i class="fab fa-youtube"></i> YouTube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@shrisaifoods.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Food City - 600001</p>
+                    </div>
+                </div>
+
             </div>
 
+            <!-- Footer Bottom Names Row -->
+            <div class="footer-bottom">
+                <p style="color: white;">2025 Shri Sai Foods. All rights reserved. Powered By <a href="http://www.etouchsolutions.in" target="_blank" style="color: rgb(99, 206, 0); text-decoration: none;">Etouch Solutions</a></p>
+            </div>
         </div>
-
-        <!-- Footer Bottom Names Row -->
-        <div class="footer-bottom">
-                  <p style="color: white;">2025 Shri Sai Foods. All rights reserved. Powered By <a href="http://www.etouchsolutions.in" target="_blank" style="color: rgb(99, 206, 0); text-decoration: none;">Etouch Solutions</a></p>
-            </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>

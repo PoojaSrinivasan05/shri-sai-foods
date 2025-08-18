@@ -45,68 +45,73 @@
     <!-- Contact Section -->
     <section class="section contact-section">
         <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>We'd love to hear from you! Whether you have questions about our menu, want to place an order, or are interested in our franchise opportunities, we're here to help.</p>
-                    
-                    <div class="contact-item">
+            <!-- Contact Info Cards -->
+            <div class="contact-info-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>123 Temple Street, South Indian Lane<br>Food City - 600001<br>Tamil Nadu, India</p>
-                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 98765 43210<br>+91 87654 32109</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@shrisaifoods.com<br>orders@shrisaifoods.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Sunday: 6:00 AM - 10:00 PM<br>Festival Days: 5:00 AM - 11:00 PM</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-utensils"></i>
-                        <div>
-                            <h4>Order Timings</h4>
-                            <p>Breakfast: 6:00 AM - 11:00 AM<br>Lunch: 11:00 AM - 3:00 PM<br>Dinner: 6:00 PM - 10:00 PM</p>
-                        </div>
-                    </div>
+                    <h4>Visit Us</h4>
+                    <p>123 Temple Street, South Indian Lane<br>Food City - 600001, Tamil Nadu</p>
                 </div>
-                
-                <div class="contact-form">
-                    <h3>Send us a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <input type="text" placeholder="Your Name *" required>
-                            <input type="email" placeholder="Your Email *" required>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4>Call Us</h4>
+                    <p>+91 98765 43210<br>+91 87654 32109</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Us</h4>
+                    <p>info@shrisaifoods.com<br>orders@shrisaifoods.com</p>
+                </div>
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>Business Hours</h4>
+                    <p>Mon-Sun: 6:00 AM - 10:00 PM<br>Festivals: 5:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="contact-form-section">
+                <h2 class="section-title">Send us a Message</h2>
+                <div class="form-layout">
+                    <form id="contactForm" class="contact-form-grid">
+                        <div class="form-left">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option value="">Subject</option>
+                                    <option value="order">Order Inquiry</option>
+                                    <option value="franchise">Franchise Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-row">
-                            <input type="tel" placeholder="Phone Number">
-                            <select>
-                                <option value="">Subject</option>
-                                <option value="order">Order Inquiry</option>
-                                <option value="franchise">Franchise Inquiry</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="complaint">Complaint</option>
-                                <option value="other">Other</option>
-                            </select>
+                        <div class="form-right">
+                            <div class="form-group">
+                                <textarea placeholder="Your Message *" rows="8" required></textarea>
+                            </div>
+                            <button type="submit" class="contact-submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
                         </div>
-                        <textarea placeholder="Your Message *" rows="6" required></textarea>
-                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -114,15 +119,16 @@
             <!-- Map Section -->
             <div class="map-section">
                 <h2 class="section-title"><i class="fas fa-map"></i> Find Us</h2>
-                <div class="map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Visit Our Location</h4>
-                        <p>123 Temple Street, South Indian Lane<br>Food City - 600001, Tamil Nadu</p>
-                        <div class="map-directions">
-                            <a href="#" class="direction-btn">Get Directions</a>
-                        </div>
-                    </div>
+                <div class="google-map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8663676778216!2d80.27073631482226!3d13.044262990806094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267661f0b8b7b%3A0x7c2c2c2c2c2c2c2c!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1642678901234!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
 

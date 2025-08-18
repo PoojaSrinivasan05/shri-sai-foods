@@ -365,3 +365,152 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(showNextImage, 3000); // Change every 3 seconds
 });
 
+// New JavaScript for redesigned features
+
+// View Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const listView = document.getElementById('tiffin-list');
+    const gridView = document.getElementById('tiffin-grid');
+    
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const view = this.getAttribute('data-view');
+            
+            // Update button states
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Toggle views
+            if (view === 'list') {
+                listView.classList.add('active');
+                gridView.classList.remove('active');
+            } else {
+                gridView.classList.add('active');
+                listView.classList.remove('active');
+            }
+        });
+    });
+});
+
+// Parallax Effect for Rice Section
+window.addEventListener('scroll', function() {
+    const parallaxBg = document.querySelector('.parallax-bg');
+    if (parallaxBg) {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        parallaxBg.style.transform = `translateY(${rate}px)`;
+    }
+});
+
+// Carousel Functionality
+let currentCarouselIndex = 0;
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselCards = document.querySelectorAll('.carousel-card');
+
+function moveCarousel(direction) {
+    if (!carouselTrack || !carouselCards.length) return;
+    
+    const cardWidth = carouselCards[0].offsetWidth + 30; // card width + gap
+    const maxIndex = carouselCards.length - 3; // show 3 cards at once
+    
+    currentCarouselIndex += direction;
+    
+    if (currentCarouselIndex < 0) {
+        currentCarouselIndex = 0;
+    } else if (currentCarouselIndex > maxIndex) {
+        currentCarouselIndex = maxIndex;
+    }
+    
+    const translateX = -currentCarouselIndex * cardWidth;
+    carouselTrack.style.transform = `translateX(${translateX}px)`;
+}
+
+// Auto-scroll carousel
+setInterval(() => {
+    if (carouselCards && carouselCards.length > 3) {
+        moveCarousel(1);
+        if (currentCarouselIndex >= carouselCards.length - 3) {
+            currentCarouselIndex = -1; // Reset to beginning
+        }
+    }
+}, 4000);
+
+// Enhanced scroll animations for new sections
+function initEnhancedScrollAnimations() {
+    const animatedElements = document.querySelectorAll(
+        '.rice-item, .carousel-card, .flip-card, .sweet-karam-card, ' +
+        '.masonry-item, .timeline-item, .premium-card, .investment-card, ' +
+        '.contact-info-card'
+    );
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                entry.target.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            }
+        });
+    }, observerOptions);
+
+    // Initially hide elements and observe them
+    animatedElements.forEach((element, index) => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(50px)';
+        element.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(element);
+    });
+}
+
+// Initialize enhanced animations
+document.addEventListener('DOMContentLoaded', initEnhancedScrollAnimations);
+
+// Smooth hover effects for premium cards
+document.addEventListener('DOMContentLoaded', function() {
+    const premiumCards = document.querySelectorAll('.premium-card');
+    
+    premiumCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) rotateY(5deg)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) rotateY(0)';
+        });
+    });
+});
+
+// Timeline animation on scroll
+function animateTimeline() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach((item, index) => {
+        const rect = item.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+            setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateX(0)';
+            }, index * 200);
+        }
+    });
+}
+
+// Initialize timeline items as hidden
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = item.classList.contains('left') ? 'translateX(-50px)' : 'translateX(50px)';
+        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+});
+
+window.addEventListener('scroll', animateTimeline);
